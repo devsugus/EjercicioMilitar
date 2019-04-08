@@ -7,6 +7,18 @@ namespace Ejercito.Models.Unidades
 {
     public class Ametrallador : IUnidad, IDestructor, IMovimiento
     {
+        public Ametrallador() { }
+        public Ametrallador(int iD, string nombre, double precio, Division division, int valor, double potenciaFuego, double movimiento)
+        {
+            ID = iD;
+            Nombre = nombre;
+            Precio = precio;
+            Division = division;
+            Valor = valor;
+            PotenciaFuego = potenciaFuego;
+            Movimiento = movimiento;
+        }
+
         public int ID { get; set; }
         public string Nombre { get; set; }
         public double Precio { get; set; }

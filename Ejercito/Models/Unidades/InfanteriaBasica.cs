@@ -7,6 +7,18 @@ namespace Ejercito.Models.Unidades
 {
     public class InfanteriaBasica : IUnidad, IDestructor, IMovimiento
     {
+        public InfanteriaBasica() { }
+        public InfanteriaBasica(int iD, string nombre, double precio, Division division, int valor, double potenciaFuego, double movimiento)
+        {
+            ID = iD;
+            Nombre = nombre;
+            Precio = precio;
+            Division = division;
+            Valor = valor;
+            PotenciaFuego = potenciaFuego;
+            Movimiento = movimiento;
+        }
+
         public int ID { get; set; }
         public string Nombre { get; set; }
         public double Precio { get; set; }

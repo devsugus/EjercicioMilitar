@@ -7,6 +7,19 @@ namespace Ejercito.Models.Unidades
 {
     public class VB98 : IUnidad, IMovimiento, IBlindado, IDestructor
     {
+        public VB98() { }
+        public VB98(int iD, string nombre, double precio, Division division, int valor, double movimiento, double potenciaFuego, double blindaje)
+        {
+            ID = iD;
+            Nombre = nombre;
+            Precio = precio;
+            Division = division;
+            Valor = valor;
+            Movimiento = movimiento;
+            PotenciaFuego = potenciaFuego;
+            Blindaje = blindaje;
+        }
+
         public int ID { get; set; }
         public string Nombre { get; set; }
         public double Precio { get; set; }

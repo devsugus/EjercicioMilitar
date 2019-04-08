@@ -7,6 +7,19 @@ namespace Ejercito.Models.Unidades
 {
     public class TorpederoM : IUnidad, IMovimiento, IDestructor, IBlindado
     {
+        public TorpederoM() { }
+        public TorpederoM(int iD, string nombre, double precio, Division division, double movimiento, double potenciaFuego, double blindaje, int valor)
+        {
+            ID = iD;
+            Nombre = nombre;
+            Precio = precio;
+            Division = division;
+            Movimiento = movimiento;
+            PotenciaFuego = potenciaFuego;
+            Blindaje = blindaje;
+            Valor = valor;
+        }
+
         public int ID { get; set; }
         public string Nombre{ get; set; }
         public double Precio{ get; set; }

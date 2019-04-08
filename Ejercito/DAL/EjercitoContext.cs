@@ -26,7 +26,7 @@ namespace Ejercito.DAL
         public DbSet<MX7899> MX7899 { get; set; }
         public DbSet<Sanitario> Sanitarios { get; set; }
         public DbSet<TAXIN66> TAXIN66 { get; set; }
-        public DbSet<TorpederoM> TorpederoMs { get; set; }
+        public DbSet<TorpederoM> TorpederoM { get; set; }
         public DbSet<VB98> VB98 { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

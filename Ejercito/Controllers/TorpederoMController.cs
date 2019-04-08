@@ -18,7 +18,7 @@ namespace Ejercito.Controllers
         // GET: TorpederoM
         public ActionResult Index()
         {
-            return View(db.TorpederoMs.ToList());
+            return View(db.TorpederoM.ToList());
         }
 
         // GET: TorpederoM/Details/5
@@ -28,7 +28,7 @@ namespace Ejercito.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TorpederoM torpederoM = db.TorpederoMs.Find(id);
+            TorpederoM torpederoM = db.TorpederoM.Find(id);
             if (torpederoM == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace Ejercito.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.TorpederoMs.Add(torpederoM);
+                db.TorpederoM.Add(torpederoM);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Ejercito.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TorpederoM torpederoM = db.TorpederoMs.Find(id);
+            TorpederoM torpederoM = db.TorpederoM.Find(id);
             if (torpederoM == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Ejercito.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TorpederoM torpederoM = db.TorpederoMs.Find(id);
+            TorpederoM torpederoM = db.TorpederoM.Find(id);
             if (torpederoM == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace Ejercito.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            TorpederoM torpederoM = db.TorpederoMs.Find(id);
-            db.TorpederoMs.Remove(torpederoM);
+            TorpederoM torpederoM = db.TorpederoM.Find(id);
+            db.TorpederoM.Remove(torpederoM);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
