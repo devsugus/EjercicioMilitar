@@ -134,7 +134,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AmetralladorController.cs" />
     <Compile Include="Controllers\AntiAereoController.cs" />
+    <Compile Include="Controllers\CanonController.cs" />
+    <Compile Include="Controllers\CapituloEjercitoController.cs" />
+    <Compile Include="Controllers\DivisionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InfanteriaBasicaController.cs" />
+    <Compile Include="Controllers\MX7899Controller.cs" />
+    <Compile Include="Controllers\TAXIN66Controller.cs" />
     <Compile Include="DAL\EjercitoContext.cs" />
     <Compile Include="DAL\EjercitoInicializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -219,6 +225,36 @@
     <Content Include="Views\AntiAereo\Details.cshtml" />
     <Content Include="Views\AntiAereo\Edit.cshtml" />
     <Content Include="Views\AntiAereo\Index.cshtml" />
+    <Content Include="Views\Canon\Create.cshtml" />
+    <Content Include="Views\Canon\Delete.cshtml" />
+    <Content Include="Views\Canon\Details.cshtml" />
+    <Content Include="Views\Canon\Edit.cshtml" />
+    <Content Include="Views\Canon\Index.cshtml" />
+    <Content Include="Views\CapituloEjercito\Create.cshtml" />
+    <Content Include="Views\CapituloEjercito\Delete.cshtml" />
+    <Content Include="Views\CapituloEjercito\Details.cshtml" />
+    <Content Include="Views\CapituloEjercito\Edit.cshtml" />
+    <Content Include="Views\CapituloEjercito\Index.cshtml" />
+    <Content Include="Views\Division\Create.cshtml" />
+    <Content Include="Views\Division\Delete.cshtml" />
+    <Content Include="Views\Division\Details.cshtml" />
+    <Content Include="Views\Division\Edit.cshtml" />
+    <Content Include="Views\Division\Index.cshtml" />
+    <Content Include="Views\InfanteriaBasica\Create.cshtml" />
+    <Content Include="Views\InfanteriaBasica\Delete.cshtml" />
+    <Content Include="Views\InfanteriaBasica\Details.cshtml" />
+    <Content Include="Views\InfanteriaBasica\Edit.cshtml" />
+    <Content Include="Views\InfanteriaBasica\Index.cshtml" />
+    <Content Include="Views\MX7899\Create.cshtml" />
+    <Content Include="Views\MX7899\Delete.cshtml" />
+    <Content Include="Views\MX7899\Details.cshtml" />
+    <Content Include="Views\MX7899\Edit.cshtml" />
+    <Content Include="Views\MX7899\Index.cshtml" />
+    <Content Include="Views\TAXIN66\Create.cshtml" />
+    <Content Include="Views\TAXIN66\Delete.cshtml" />
+    <Content Include="Views\TAXIN66\Details.cshtml" />
+    <Content Include="Views\TAXIN66\Edit.cshtml" />
+    <Content Include="Views\TAXIN66\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

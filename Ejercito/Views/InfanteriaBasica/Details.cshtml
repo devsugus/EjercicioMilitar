@@ -1,0 +1,58 @@
+﻿@model Ejercito.Models.Unidades.InfanteriaBasica
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="templatetitle">Details</h2>
+
+<div>
+    <h4 class="detailstitle">InfanteriaBasica</h4>
+    <hr />
+    <dl class="dl-horizontal detailslist">
+        <dt class="detailsname">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd class="detailsinput">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt class="detailsname">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd class="detailsinput">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt class="detailsname">
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd class="detailsinput">
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt class="detailsname">
+            @Html.DisplayNameFor(model => model.PotenciaFuego)
+        </dt>
+
+        <dd class="detailsinput">
+            @Html.DisplayFor(model => model.PotenciaFuego)
+        </dd>
+
+        <dt class="detailsname">
+            @Html.DisplayNameFor(model => model.Movimiento)
+        </dt>
+
+        <dd class="detailsinput">
+            @Html.DisplayFor(model => model.Movimiento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

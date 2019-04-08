@@ -26,5 +26,11 @@ namespace Ejercito.DAL
         public System.Data.Entity.DbSet<Ejercito.Models.Unidades.Ametrallador> Ametralladors { get; set; }
 
         public System.Data.Entity.DbSet<Ejercito.Models.Unidades.AntiAereo> AntiAereos { get; set; }
+
+        public System.Data.Entity.DbSet<Ejercito.Models.Unidades.InfanteriaBasica> InfanteriaBasicas { get; set; }
+
+        public System.Data.Entity.DbSet<Ejercito.Models.Unidades.MX7899> MX7899 { get; set; }
+
+        public System.Data.Entity.DbSet<Ejercito.Models.Unidades.TAXIN66> TAXIN66 { get; set; }
     }
 }

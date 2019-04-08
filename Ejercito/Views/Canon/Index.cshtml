@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Ejercito.Models.Unidades.Canon>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="templatetitle">Index</h2>
+
+
+<p class="options">
+    @Html.ActionLink("Crear nuevo Registro", "Create")
+</p>
+<table id="datatable" class="table">
+<thead class="tablehead">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PotenciaFuego)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th></th>
+    </tr>
+
+</thead>
+
+<tbody class="tablebody">
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PotenciaFuego)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td class="options">
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+</tbody>
+
+</table>

@@ -1,0 +1,33 @@
+﻿@model Ejercito.Models.CapituloEjercito
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2 class="templatetitle">Delete</h2>
+
+<h2>¿Estás seguro de querer borrar este Registro? No podrás recuperar la información después.</h2>
+<br>
+<div>
+    <h4>CapituloEjercito</h4>
+    <hr />
+    <dl class="dl-horizontal deletelist">
+        <dt class="deletename">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd class="deleteinput">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default deletesubmit" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>
