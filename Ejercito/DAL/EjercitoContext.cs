@@ -22,5 +22,9 @@ namespace Ejercito.DAL
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
+
+        public System.Data.Entity.DbSet<Ejercito.Models.Unidades.Ametrallador> Ametralladors { get; set; }
+
+        public System.Data.Entity.DbSet<Ejercito.Models.Unidades.AntiAereo> AntiAereos { get; set; }
     }
 }

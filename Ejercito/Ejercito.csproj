@@ -132,6 +132,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AmetralladorController.cs" />
+    <Compile Include="Controllers\AntiAereoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\EjercitoContext.cs" />
     <Compile Include="DAL\EjercitoInicializer.cs" />
@@ -207,6 +209,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Ametrallador\Create.cshtml" />
+    <Content Include="Views\Ametrallador\Delete.cshtml" />
+    <Content Include="Views\Ametrallador\Details.cshtml" />
+    <Content Include="Views\Ametrallador\Edit.cshtml" />
+    <Content Include="Views\Ametrallador\Index.cshtml" />
+    <Content Include="Views\AntiAereo\Create.cshtml" />
+    <Content Include="Views\AntiAereo\Delete.cshtml" />
+    <Content Include="Views\AntiAereo\Details.cshtml" />
+    <Content Include="Views\AntiAereo\Edit.cshtml" />
+    <Content Include="Views\AntiAereo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
