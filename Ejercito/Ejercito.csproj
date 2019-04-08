@@ -141,6 +141,7 @@
     <Compile Include="Controllers\InfanteriaBasicaController.cs" />
     <Compile Include="Controllers\MX7899Controller.cs" />
     <Compile Include="Controllers\TAXIN66Controller.cs" />
+    <Compile Include="Controllers\TorpederoMController.cs" />
     <Compile Include="DAL\EjercitoContext.cs" />
     <Compile Include="DAL\EjercitoInicializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -255,6 +256,11 @@
     <Content Include="Views\TAXIN66\Details.cshtml" />
     <Content Include="Views\TAXIN66\Edit.cshtml" />
     <Content Include="Views\TAXIN66\Index.cshtml" />
+    <Content Include="Views\TorpederoM\Create.cshtml" />
+    <Content Include="Views\TorpederoM\Delete.cshtml" />
+    <Content Include="Views\TorpederoM\Details.cshtml" />
+    <Content Include="Views\TorpederoM\Edit.cshtml" />
+    <Content Include="Views\TorpederoM\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
