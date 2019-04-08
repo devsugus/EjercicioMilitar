@@ -23,11 +23,11 @@ namespace Ejercito.DAL
         public DbSet<AntiAereo> AntiAereos { get; set; }
         public DbSet<Canon> Canones { get; set; }
         public DbSet<InfanteriaBasica> InfanteriaBasicas { get; set; }
-        public DbSet<MX7899> MX7899s { get; set; }
+        public DbSet<MX7899> MX7899 { get; set; }
         public DbSet<Sanitario> Sanitarios { get; set; }
-        public DbSet<TAXIN66> TAXIN66s { get; set; }
+        public DbSet<TAXIN66> TAXIN66 { get; set; }
         public DbSet<TorpederoM> TorpederoMs { get; set; }
-        public DbSet<VB98> VB98s { get; set; }
+        public DbSet<VB98> VB98 { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

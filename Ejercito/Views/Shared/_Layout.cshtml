@@ -1,15 +1,242 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <title>@ViewBag.Title - ¡La información de tus Ejércitos a un clic!</title>
+    @* Bootstrap *@
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>*@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @* Icono página *@
+    <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+    @* W3Schools CSS *@
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    @* Fonts *@
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    @* Estilos *@
+    <style>
+
+
+        * {
+            font-family: 'Teko', sans-serif;
+        }
+
+        /*Index Home*/
+        .navbar.navbar-inverse.navbar-fixed-top li a {
+            transition-duration: 0.6s;
+            font-size: xx-large;
+            color: white;
+            text-shadow: black -1px -1px;
+        }
+
+            .navbar.navbar-inverse.navbar-fixed-top li a:hover {
+                transition-duration: 0.6s;
+                font-size: 230%;
+                color: lightgray;
+                text-shadow: black -1px -1px;
+            }
+
+        .navbar-brand.title {
+            font-weight: bolder;
+            font-size: 270%;
+            color: white;
+            text-shadow: black -1px -1px;
+        }
+
+        .jumbotron {
+            background-color: darkolivegreen;
+            color: white;
+            text-shadow: black 1px 1px;
+        }
+
+            .jumbotron h1 {
+                font-family: 'Teko', sans-serif;
+            }
+
+            .jumbotron h5 {
+                font-family: 'Teko', sans-serif;
+                font-size: 150%;
+            }
+
+            .jumbotron p {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 100%;
+                text-align: justify;
+            }
+
+        .centered {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 300%;
+            color: black;
+            text-shadow: white 1px 1px;
+        }
+
+        /*Plantillas*/
+        .templatetitle {
+        }
+
+        /*Plantilla List*/
+        .bodylist {
+        }
+
+        .options p {
+            font-family: 'Teko', sans-serif;
+            font-size: 120%;
+        }
+
+        .options td {
+            font-family: 'Teko', sans-serif;
+            font-size: 120%;
+        }
+
+        .tablehead {
+        }
+
+        .tablebody {
+        }
+
+        /*Plantilla Create*/
+
+        .bodycreate {
+        }
+
+        .createtitle {
+        }
+
+        .createform {
+        }
+
+        .createname {
+        }
+
+        .createsubmit {
+        }
+
+        /*Plantilla Delete*/
+
+        .bodydelete {
+        }
+
+        .deletelist {
+        }
+
+        .deletename {
+        }
+
+        .deleteinput {
+        }
+
+        .deletesubmit {
+        }
+
+        /*Plantilla Details*/
+
+        .bodydetails {
+        }
+
+        .detailstitle {
+        }
+
+        .detailslist {
+        }
+
+        .detailsname {
+        }
+
+        .detailsinput {
+        }
+
+        /*Plantilla Edit*/
+
+        .bodyedit {
+        }
+
+        .edittitle {
+        }
+
+        .editname {
+        }
+
+        .editsubmit {
+        }
+    </style>
+    @* Datatable Botones *@
+    @*<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src=" https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>"
+        <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.bootstrap.min.js"></script>"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>"
+        <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>"
+        <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>"
+        <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.colVis.min.js"></script>"
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />"
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"  />
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.bootstrap.min.css"  />
+
+        <script>
+            $(document).ready(function () {
+                var table = $('#datatable').DataTable({
+                    lengthChange: false,
+                    buttons: ['copy', 'excel', 'pdf', 'colvis']
+                });
+
+                table.buttons().container()
+                    .appendTo('#datatable_wrapper .col-sm-6:eq(0)');
+            });
+        </script>*@
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>"
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>"
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>"
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>"
+
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />"
+    <link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script>$(document).ready(function () {
+            $('#datatable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'copyHtml5',
+                        text: '<i class="fa fa-files-o"></i>',
+                        titleAttr: 'Copy'
+                    },
+                    {
+                        extend: 'excelHtml5',
+                        text: '<i class="fa fa-file-excel-o"></i>',
+                        titleAttr: 'Excel'
+                    },
+                    {
+                        extend: 'csvHtml5',
+                        text: '<i class="fa fa-file-text-o"></i>',
+                        titleAttr: 'CSV'
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        text: '<i class="fa fa-file-pdf-o"></i>',
+                        titleAttr: 'PDF'
+                    }
+                ]
+            });
+        });</script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top w3-brown">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,13 +244,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nombre de aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Ejércitos del Mundo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand title" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("CapituloEjercito", "Index", "CapituloEjercito")</li>
+                    <li>@Html.ActionLink("Division", "Index", "Division")</li>
+                    <li>@Html.ActionLink("Ametrallador", "Index", "Ametrallador")</li>
+                    <li>@Html.ActionLink("AntiAereo", "Index", "AntiAereo")</li>
+                    <li>@Html.ActionLink("Canon", "Index", "Canon")</li>
+                    <li>@Html.ActionLink("InfanteriaBasica", "Index", "InfanteriaBasica")</li>
+                    <li>@Html.ActionLink("MX7899", "Index", "MX7899")</li>
+                    <li>@Html.ActionLink("TAXIN66", "Index", "TAXIN66")</li>
+                    <li>@Html.ActionLink("TorpederoM", "Index", "TorpederoM")</li>
                 </ul>
             </div>
         </div>
@@ -32,10 +265,9 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p style="font-size:150%;">&copy; @DateTime.Now.Year - Ejércitos del Mundo. Todos los derechos reservados a sus respectivos propietarios.</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
